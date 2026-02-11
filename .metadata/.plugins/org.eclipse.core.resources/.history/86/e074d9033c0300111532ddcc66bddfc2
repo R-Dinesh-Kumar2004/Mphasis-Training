@@ -1,0 +1,47 @@
+package com.model;
+
+import java.sql.Date;
+
+public class Employee {
+	private int id;
+	private String name;
+	private double percentage;
+	private Date dateOfExam;
+	public Employee(int id, String name, double percentage, Date dateOfExam) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.percentage = percentage;
+		this.dateOfExam = dateOfExam;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getPercentage() {
+		return percentage;
+	}
+	public void setPercentage(double percentage) {
+		this.percentage = percentage;
+	}
+	public Date getDateOfExam() {
+		return dateOfExam;
+	}
+	public void setDateOfExam(Date dateOfExam) {
+		this.dateOfExam = dateOfExam;
+	}
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", percentage=" + percentage + ", dateOfExam=" + dateOfExam
+				+ "]";
+	}
+	
+}

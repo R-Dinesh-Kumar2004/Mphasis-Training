@@ -1,0 +1,33 @@
+package com.hibernate.HibernateDemo;
+
+import java.math.BigDecimal;
+import java.sql.Date;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.hibernate.entities.Address;
+import com.hibernate.entities.Employee;
+import com.hibernate.utils.HBUtils;
+
+public class Ex02GetEmployee {
+    public static void main( String[] args )
+    {
+  
+        
+        Session session = HBUtils.getSessionFactory().openSession();
+        
+        Transaction transaction = session.beginTransaction();
+        
+        Address address = new Address("Coimbatore", "Tamil Nadu", "India");
+        Employee employee = new Employee("Arjun", new BigDecimal(21000), 150, Date.valueOf("2026-01-01"), true, 1, 'A', address);
+        
+        session.persist(employee);
+        
+        transaction.commit();
+        
+        session.close();
+    }
+}

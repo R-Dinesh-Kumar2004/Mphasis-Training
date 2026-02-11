@@ -1,0 +1,12 @@
+package com.hibernate.HibernateAssignment;
+
+import com.hibernate.entities.Trainer;
+
+public class DeleteStudent {
+
+	public static void main(String[] args) {
+
+		
+	}
+
+}

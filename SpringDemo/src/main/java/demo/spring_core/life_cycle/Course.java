@@ -1,0 +1,46 @@
+package demo.spring_core.life_cycle;
+
+public class Course {
+	private String title;
+	private double fees;
+
+	public Course() {
+		super();
+	}
+
+	public Course(String title, double fees) {
+		super();
+		this.title = title;
+		this.fees = fees;
+	}
+	
+	public void abc() {
+		System.out.println("Course init");
+	}
+	
+	public void def() {
+		System.out.println("Course destroy");
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public double getFees() {
+		return fees;
+	}
+
+	public void setFees(double fees) {
+		this.fees = fees;
+	}
+
+	@Override
+	public String toString() {
+		return "Course [title=" + title + ", fees=" + fees + "]";
+	}
+
+}

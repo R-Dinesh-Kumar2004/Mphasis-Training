@@ -1,0 +1,16 @@
+package com.hibernate.entities;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.PrimaryKeyJoinColumn;
+
+@Entity
+@PrimaryKeyJoinColumn
+public class Admin extends User{
+	
+	@Column(length = 20)
+	private String department;
+	@Column(length = 20)
+	private String accessLevel;
+	
+}

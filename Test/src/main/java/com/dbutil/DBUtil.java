@@ -1,0 +1,40 @@
+package com.dbutil;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class DBUtil {
+	static Connection connection = null;
+
+	private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
+	private static final String URL = "jdbc:mysql://localhost:3306/";
+	private static final String SCHEMA_URL = "jdbc:mysql://localhost:3306/company";
+	private static final String USER_NAME = "root";
+	private static final String PASSWORD = "root@39";
+	
+	public static final String SCHEMA = "CREATE SCHEMA company";
+	public static final String CREATE_TABLE = "CREATE TABLE `company`.`employees` (\r\n"
+			+ "  `id` INT NOT NULL AUTO_INCREMENT,\r\n"
+			+ "  `name` VARCHAR(45) NOT NULL,\r\n"
+			+ "  `percentage` DECIMAL(5,2) NOT NULL,\r\n"
+			+ "  `date_of_exam` VARCHAR(45) NOT NULL,\r\n"
+			+ "  PRIMARY KEY (`id`));";
+	public static final String INSERT_QUERY = "insert into employees(name,percentage,date_of_exam) values(?,?,?)";
+	
+	static {
+		try {
+			Class.forName(DRIVER);
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static Connection getSchemaConnection() throws SQLException {
+		return DriverManager.getConnection(SCHEMA_URL, USER_NAME, PASSWORD);
+	}
+	
+	public static Connection getConnection() throws SQLException {
+		return DriverManager.getConnection(URL, USER_NAME, PASSWORD);
+	}
+}

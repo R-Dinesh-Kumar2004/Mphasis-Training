@@ -1,0 +1,13 @@
+package demo.spring_core.SpringDemo;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.objenesis.instantiator.basic.NewInstanceInstantiator;
+
+import demo.spring_core.model.Certificate;
+
+public class Ex01SpringCoreDemo {
+    public static void main( String[] args ){
+        ApplicationContext context = new ClassPathXmlApplicationContext("/SpringDemo/src/main/java/spring.xml");
+        Certificate certificate 
+    }
+}

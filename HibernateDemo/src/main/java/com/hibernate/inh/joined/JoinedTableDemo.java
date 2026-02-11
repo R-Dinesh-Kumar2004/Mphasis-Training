@@ -1,0 +1,29 @@
+package com.hibernate.inh.joined;
+
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+
+public class JoinedTableDemo {
+
+	public static void main(String[] args) {
+		
+		Session session = new Configuration().configure("com/hibernate/inh/joined/cfg.xml").buildSessionFactory().openSession();
+
+		Transaction transaction = session.beginTransaction();
+		
+		Employee102 employee = new Employee102("Yash");
+		RegularEmployee102 regularEmployee = new RegularEmployee102("Gowtham", 30000, 1000);
+		ContractEmployee102 contractEmployee = new ContractEmployee102("Kastubh", 500, "3 months");
+		
+		session.persist(employee);
+		session.persist(regularEmployee);
+		session.persist(contractEmployee);
+		
+		transaction.commit();
+		session.close();
+	}
+
+}

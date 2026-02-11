@@ -1,0 +1,22 @@
+package com.hibernate.HibernateAssignment;
+
+import java.rmi.StubNotFoundException;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import com.hibernate.entities.Student;
+import com.hibernate.entities.Trainer;
+import com.hibernate.utils.HBUtils;
+
+public class DeleteStudent {
+
+	public static void main(String[] args) {
+
+		Session session = HBUtils.getSessionFactory().openSession();
+		Transaction transaction = session.beginTransaction();
+		
+		Student student = 
+	}
+
+}

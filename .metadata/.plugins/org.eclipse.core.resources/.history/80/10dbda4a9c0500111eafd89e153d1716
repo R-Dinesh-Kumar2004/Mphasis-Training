@@ -1,0 +1,10 @@
+package com.hibernate.many_to_many;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class Trainee {
+	public Trainee() {
+		// TODO Auto-generated constructor stub
+	}
+}

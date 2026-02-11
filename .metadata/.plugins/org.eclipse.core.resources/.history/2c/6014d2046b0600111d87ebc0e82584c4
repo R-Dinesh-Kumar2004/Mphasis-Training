@@ -1,0 +1,14 @@
+package demo.spring_core.model;
+
+public class Certificate {
+	private int id;
+	private String title;
+	private double fees;
+
+	public Certificate() {
+		super();
+	}
+
+	
+
+}

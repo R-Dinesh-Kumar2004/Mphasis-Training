@@ -1,0 +1,8 @@
+package demo.spring_core.life_cycle;
+
+import org.springframework.beans.factory.config.BeanPostProcessor;
+
+public class CustomProcessor implements BeanPostProcessor{
+	
+	
+}

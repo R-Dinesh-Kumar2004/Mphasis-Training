@@ -1,0 +1,19 @@
+package com.hibernate.HibernateAssignment;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import com.hibernate.utils.HBUtils;
+
+public class App {
+    public static void main( String[] args ){
+    	
+    	Session session = HBUtils.getSessionFactory().openSession();
+    	Transaction transaction = session.beginTransaction();
+    	
+    	
+    	
+    	transaction.commit();
+    	session.close();
+    }
+}

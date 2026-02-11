@@ -1,0 +1,6 @@
+package com.hibernate.entities;
+
+public class Student {
+	private String course;
+	private float feesPaid;
+}

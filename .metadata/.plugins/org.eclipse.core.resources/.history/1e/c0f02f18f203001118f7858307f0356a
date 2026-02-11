@@ -1,0 +1,11 @@
+package com.hibernate.utils;
+
+import org.hibernate.SessionFactory;
+
+public class HBUtils {
+	private static final SessionFactory SESSION_FACTORY;
+	
+	static {
+		
+	}
+}

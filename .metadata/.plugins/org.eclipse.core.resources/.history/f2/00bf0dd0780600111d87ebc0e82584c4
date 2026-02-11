@@ -1,0 +1,18 @@
+package demo.spring_core.autowired;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import demo.spring_core.model.Student;
+
+public class Ex03Autowiring {
+
+	public static void main(String[] args) {
+		
+		ApplicationContext context = new ClassPathXmlApplicationContext("demo/spring_core/autowired/spring.xml");
+		
+		Student student = context.getBean(Student.class);
+		System.out.println(student);
+	}
+
+}

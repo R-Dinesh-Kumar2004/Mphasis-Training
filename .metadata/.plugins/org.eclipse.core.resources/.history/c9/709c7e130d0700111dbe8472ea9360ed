@@ -1,0 +1,19 @@
+package demo.spring_core.life_cycle;
+
+import org.jspecify.annotations.Nullable;
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.config.BeanPostProcessor;
+
+public class CustomProcessor implements BeanPostProcessor{
+	
+	@Override
+	public @Nullable Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
+		
+		return BeanPostProcessor.super.postProcessBeforeInitialization(bean, beanName);
+	}
+	
+	@Override
+	public @Nullable Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
+		return BeanPostProcessor.super.postProcessAfterInitialization(bean, beanName);
+	}
+}

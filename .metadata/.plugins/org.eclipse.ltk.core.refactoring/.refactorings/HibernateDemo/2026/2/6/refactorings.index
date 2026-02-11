@@ -1,0 +1,21 @@
+1770438601530	Rename package 'com.hibernate.model'
+1770438623216	Rename package 'com.hibernate.entity'
+1770439091282	Delete element
+1770447932357	Copy compilation unit
+1770448599937	Copy compilation unit
+1770453588897	Copy compilation unit
+1770454232923	Copy compilation unit
+1770454806784	Copy compilation unit
+1770456622304	Delete element
+1770456632891	Delete element
+1770460714337	Copy compilation unit
+1770461523551	Copy package
+1770461594093	Rename type 'Employee101'
+1770461746627	Rename type 'RegularEmployee'
+1770461763786	Rename type 'ContractEmployee'
+1770462132878	Copy file
+1770462187370	Rename resource 'hibernate.cfg.xml'
+1770464711524	Copy package
+1770464799642	Rename type 'Employee102'
+1770464827968	Rename type 'ContractEmployee102'
+1770464853840	Rename type 'RegularEmployee102'

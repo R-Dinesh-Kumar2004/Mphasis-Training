@@ -1,0 +1,69 @@
+package com.hibernate.one_to_many;
+
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+
+@Entity
+public class Certificate {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	private String title;
+
+	@OneToMany(mappedBy = "certificate", cascade = CascadeType.ALL)
+	private List<Student> students;
+
+	public Certificate() {
+		super();
+	}
+
+	public Certificate(String title, List<Student> students) {
+		super();
+		this.title = title;
+		this.students = students;
+	}
+
+	public Certificate(int id, String title, List<Student> students) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.students = students;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public List<Student> getStudents() {
+		return students;
+	}
+
+	public void setStudents(List<Student> students) {
+		this.students = students;
+	}
+
+	@Override
+	public String toString() {
+		return "Certificate [id=" + id + ", title=" + title + "]";
+	}
+
+}

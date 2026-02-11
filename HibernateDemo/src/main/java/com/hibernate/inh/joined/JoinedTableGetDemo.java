@@ -1,0 +1,26 @@
+package com.hibernate.inh.joined;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.cfg.Configuration;
+
+
+public class JoinedTableGetDemo {
+
+	public static void main(String[] args) {
+		
+		Session session = new Configuration().configure("com/hibernate/inh/joined/cfg.xml").buildSessionFactory().openSession();
+		
+		//get 1 contract employee
+//		ContractEmployee102 contractEmployee = session.get(ContractEmployee102.class, 3);
+//		System.out.println(contractEmployee);
+		
+		//get list of contract employee
+		List<ContractEmployee102> emp = session.createQuery("from ContractEmployee102",ContractEmployee102.class).getResultList();
+		emp.forEach(System.out::println);
+		
+		session.close();
+	}
+
+}

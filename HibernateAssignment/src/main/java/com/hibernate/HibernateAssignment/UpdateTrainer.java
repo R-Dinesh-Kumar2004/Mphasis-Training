@@ -1,0 +1,29 @@
+package com.hibernate.HibernateAssignment;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import com.hibernate.entities.Trainer;
+import com.hibernate.utils.HBUtils;
+
+public class UpdateTrainer {
+
+	public static void main(String[] args) {
+		
+		Session session = HBUtils.getSessionFactory().openSession();
+		Transaction transaction = session.beginTransaction();
+		
+		Trainer t1 = session.get(Trainer.class, 1);
+		t1.setExpertise("MERN Stack");
+		
+		Trainer t2 = session.get(Trainer.class, 2);
+		t2.setExpertise("Python Trainer");
+		t2.setSalary(t1.getSalary()+1000);
+		
+		
+		
+		transaction.commit();
+		session.close();
+	}
+
+}

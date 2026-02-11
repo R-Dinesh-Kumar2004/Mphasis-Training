@@ -1,0 +1,29 @@
+package com.hibernate.HibernateDemo;
+
+import java.math.BigDecimal;
+import java.sql.Date;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.hibernate.entities.Address;
+import com.hibernate.entities.Employee;
+import com.hibernate.utils.HBUtils;
+
+public class Ex02GetEmployee {
+    public static void main( String[] args )
+    {
+        Session session = HBUtils.getSessionFactory().openSession();
+        
+        //get
+        Employee employee = session.get(Employee.class,10);
+        System.out.println(employee);
+        
+        //load
+        Employee employee2 = session.load(Employee.class, );
+        
+        session.close();
+    }
+}

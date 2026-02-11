@@ -1,0 +1,70 @@
+package com.hibernate.entities;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.PrimaryKeyJoinColumn;
+
+@Entity
+@PrimaryKeyJoinColumn(name = "user_id")
+public class Trainer extends User {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+
+	@Column(length = 50)
+	private String expertise;
+
+	private float salary;
+
+	public Trainer() {
+		super();
+	}
+
+	public Trainer(String name, String email, String expertise, float salary) {
+		super(name, email);
+		this.expertise = expertise;
+		this.salary = salary;
+	}
+
+	public Trainer(String name, String email, int id, String expertise, float salary) {
+		super(name, email);
+		this.id = id;
+		this.expertise = expertise;
+		this.salary = salary;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getExpertise() {
+		return expertise;
+	}
+
+	public void setExpertise(String expertise) {
+		this.expertise = expertise;
+	}
+
+	public float getSalary() {
+		return salary;
+	}
+
+	public void setSalary(float salary) {
+		this.salary = salary;
+	}
+
+	@Override
+	public String toString() {
+		return "Trainer [id=" + id + ", expertise=" + expertise + ", salary=" + salary + "User =" + super.toString()
+				+ "]";
+	}
+
+}

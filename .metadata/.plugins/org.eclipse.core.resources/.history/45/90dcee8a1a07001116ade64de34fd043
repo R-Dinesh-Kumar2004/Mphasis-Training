@@ -1,0 +1,6 @@
+package demo.spring.jdbc.dao;
+
+public interface BookDao {
+	void createSchema();
+	
+}

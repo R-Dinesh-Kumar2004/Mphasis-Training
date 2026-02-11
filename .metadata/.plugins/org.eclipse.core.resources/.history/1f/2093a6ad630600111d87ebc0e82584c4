@@ -1,0 +1,40 @@
+package demo.spring_core.model;
+
+public class Certificate {
+	private int id;
+	private String titel;
+	private double fees;
+	public Certificate() {
+		super();
+	}
+	public Certificate(int id, String titel, double fees) {
+		super();
+		this.id = id;
+		this.titel = titel;
+		this.fees = fees;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getTitel() {
+		return titel;
+	}
+	public void setTitel(String titel) {
+		this.titel = titel;
+	}
+	public double getFees() {
+		return fees;
+	}
+	public void setFees(double fees) {
+		this.fees = fees;
+	}
+	@Override
+	public String toString() {
+		return "Certificate [id=" + id + ", titel=" + titel + ", fees=" + fees + "]";
+	}
+	
+	
+}

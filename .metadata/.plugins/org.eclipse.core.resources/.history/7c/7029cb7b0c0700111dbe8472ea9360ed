@@ -1,0 +1,5 @@
+package demo.spring_core.life_cycle;
+
+public class CustomProcessor implements baen{
+
+}

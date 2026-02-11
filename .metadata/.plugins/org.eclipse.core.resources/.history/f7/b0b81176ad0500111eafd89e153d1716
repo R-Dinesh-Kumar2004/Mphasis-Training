@@ -1,0 +1,26 @@
+package com.hibernate.hql;
+
+import java.math.BigDecimal;
+import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.hibernate.Session;
+
+import com.hibernate.entities.Address;
+import com.hibernate.entities.Employee;
+
+public class App {
+
+	public static void main(String[] args) {
+		
+		Session session = HBUtils.getSessionFactory().openSession();
+		
+		 Address address = new Address("Coimbatore", "Tamil Nadu", "India");
+	        List<Employee> employees = new ArrayList<>();
+	        employees.add(new Employee("Raj", new BigDecimal(95000), 140, Date.valueOf("2028-01-01"), true, 6, 'B', address));
+	        employees.add(new Employee("Mani", new BigDecimal(5000), 140, Date.valueOf("2018-09-01"), true, 2, 'A', address));
+	        employees.add(new Employee("Harsh", new BigDecimal(95000), 140, Date.valueOf("2020-10-01"), true, 0, 'C', address));
+	}
+
+}

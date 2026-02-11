@@ -1,0 +1,9 @@
+package com.dao;
+
+import java.sql.SQLException;
+
+public interface EmployeeDao {
+	int createSchema(String schema) throws SQLException;
+	int createTable() throws SQLException;
+	int insert
+}

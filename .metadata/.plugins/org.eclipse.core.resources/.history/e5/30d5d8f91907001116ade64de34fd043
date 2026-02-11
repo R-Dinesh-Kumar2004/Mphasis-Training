@@ -1,0 +1,9 @@
+package demo.spring.jdbc.dao.model;
+
+public class Book {
+	private int bookId;
+	private String bookName;
+	private double bookPrice;
+	private int noOfCopies;
+	private boolean 
+}

@@ -1,0 +1,38 @@
+package com.hibernate.many_to_many;
+
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import com.hibernate.utils.HBUtils;
+
+public class ManyToManyDemo {
+
+	public static void main(String[] args) {
+		
+		Session session = HBUtils.getSessionFactory().openSession();
+		Transaction transaction = session.beginTransaction();
+		
+		Course c1 = new Course();
+		c1.setTitle("Spring");
+		
+		Course c2 = new Course();
+		c1.setTitle("Spring Boot");
+		
+		Course c3 = new Course();
+		c1.setTitle("MERN Stack");
+		
+		Trainee t1 = new Trainee("Kaustubh", List.of(c1,c3));
+		
+		Trainee t2 = new Trainee("Striver");
+		
+		Trainee t3 = new Trainee();
+		t1.setName("Kunal");
+		
+		transaction.commit();
+		session.close();
+	}
+
+}

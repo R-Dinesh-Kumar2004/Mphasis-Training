@@ -1,0 +1,70 @@
+package com.hibernate.entities;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.PrimaryKeyJoinColumn;
+
+@Entity
+@PrimaryKeyJoinColumn(name = "user_id")
+public class Student extends User{
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	
+	@Column(length = 50)
+	private String course;
+	
+	private float feesPaid;
+
+	public Student() {
+		super();
+	}
+
+	public Student(String name, String email, String course, float feesPaid) {
+		super(name, email);
+		this.course = course;
+		this.feesPaid = feesPaid;
+	}
+
+	public Student(String name, String email, int id, String course, float feesPaid) {
+		super(name, email);
+		this.id = id;
+		this.course = course;
+		this.feesPaid = feesPaid;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getCourse() {
+		return course;
+	}
+
+	public void setCourse(String course) {
+		this.course = course;
+	}
+
+	public float getFeesPaid() {
+		return feesPaid;
+	}
+
+	public void setFeesPaid(float feesPaid) {
+		this.feesPaid = feesPaid;
+	}
+
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", course=" + course + ", feesPaid=" + feesPaid + "User ="+ super.toString()+"]";
+	}
+	
+	
+}

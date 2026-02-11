@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\dinesh.r6\eclipse-workspace"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="internal"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="demo.spring_jdbc.SpringJDBCDemo"/>
+			<item value="demo.spring_core.SpringDemo"/>
+			<item value="com.hibernate.HibernateAssignment"/>
+			<item value="com.hibernate.HibernateMapping"/>
+			<item value="com.hibernate.HibernateDemo"/>
+			<item value="com.jstl.test.Test"/>
+			<item value="com.jstl.Test"/>
+			<item value="com.jstl.test"/>
+			<item value="com.jstl.JSTlDemo"/>
+		</list>
+		<list key="groupId">
+			<item value="demo.spring_jdbc"/>
+			<item value="demo.spring_core"/>
+			<item value="com.hibernate"/>
+			<item value="com.jstl.test"/>
+			<item value="com.jstl"/>
+		</list>
+		<list key="artifactId">
+			<item value="SpringJDBCDemo"/>
+			<item value="SpringDemo"/>
+			<item value="HibernateAssignment"/>
+			<item value="HibernateMapping"/>
+			<item value="HibernateDemo"/>
+			<item value="Test"/>
+			<item value="test"/>
+			<item value="JSTlDemo"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

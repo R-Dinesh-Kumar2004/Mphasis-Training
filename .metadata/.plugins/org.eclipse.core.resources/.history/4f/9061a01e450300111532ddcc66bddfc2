@@ -1,0 +1,32 @@
+package com.jdbc.demo;
+
+import java.sql.Date;
+import java.util.Scanner;
+
+import com.dao.EmployeeDao;
+import com.dao.EmployeeDaoImpl;
+import com.model.Employee;
+
+public class Ex03InsertEmployee {
+
+	public static void main(String[] args) {
+		EmployeeDao employeeDao = new EmployeeDaoImpl();
+		
+		Employee employee = new Employee("Raj",89.67,Date.valueOf("2026-01-01"));
+		
+		try {
+			int result = employeeDao.createTable();
+			
+			if(result == 0) {
+				System.out.println("Data inserted successfully.");
+			}
+			else {
+				System.out.println("Data can't be inserted");
+			}
+		}catch (Exception e) {
+			System.out.println("OOPs something went wrong");
+			e.printStackTrace();
+		}
+	}
+
+}

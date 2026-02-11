@@ -1,0 +1,45 @@
+package com.hibernate.onetoone;
+
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+public class Laptop {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	private String brand;
+
+	public Laptop() {
+		super();
+	}
+
+	public Laptop(int id, String brand) {
+		super();
+		this.id = id;
+		this.brand = brand;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getBrand() {
+		return brand;
+	}
+
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+
+	@Override
+	public String toString() {
+		return "Laptop [id=" + id + ", brand=" + brand + "]";
+	}
+
+}

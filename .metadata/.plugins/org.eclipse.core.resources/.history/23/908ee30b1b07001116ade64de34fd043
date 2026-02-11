@@ -1,0 +1,10 @@
+package demo.spring.jdbc.dao;
+
+import demo.spring.jdbc.dao.model.Book;
+
+public interface BookDao {
+	void createSchema();
+	void createTable();
+	int insertBook(Book book);
+	int modifyB
+}

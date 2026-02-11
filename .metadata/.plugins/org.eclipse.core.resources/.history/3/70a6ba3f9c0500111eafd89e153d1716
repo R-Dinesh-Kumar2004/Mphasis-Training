@@ -1,0 +1,8 @@
+package com.hibernate.many_to_many;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class Course {
+
+}

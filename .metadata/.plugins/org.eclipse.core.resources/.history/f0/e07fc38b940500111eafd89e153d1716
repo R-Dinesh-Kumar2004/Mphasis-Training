@@ -1,0 +1,37 @@
+package com.hibernate.HibernateAssignment;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import com.hibernate.entities.Admin;
+import com.hibernate.entities.Student;
+import com.hibernate.entities.Trainer;
+import com.hibernate.utils.HBUtils;
+
+public class CRUDDemo {
+    public static void main( String[] args ){
+    	
+    	Session session = HBUtils.getSessionFactory().openSession();
+    	Transaction transaction = session.beginTransaction();
+    	
+    	Trainer t1 = new Trainer("Raj", "raj@gmail.com", "Java", 150000);
+    	Trainer t2 = new Trainer("Ramu", "ramu@gmail.com", "DSA", 250000);
+    	
+    	Student s1 = new Student("Anu", "anu@gmail.com", "Java", 15000);
+    	Student s2 = new Student("Arjun", "arjun@gmail.com", "Full Stack", 25000);
+    	
+    	Admin a1 = new Admin("Bala", "bala@gmail.com", "Admin", "Specific");
+    	Admin a2 = new Admin("Balram", "balram@gmail.com", "EASE+", "ALL");
+    	
+    	session.persist(t1);
+    	session.persist(t2);
+    	session.persist(s1);
+    	session.persist(s2);
+    	session.persist(a1);
+    	session.persist(s2);
+    	
+    	
+    	transaction.commit();
+    	session.close();
+    }
+}

@@ -1,0 +1,14 @@
+package demo.spring.jdbc.utils;
+
+public class DBUtils {
+	public static final String CREATE_SCHEMA = "";
+	public static final String CREATE_TABLE = "";
+	
+	public static final String INSERT_BOOK = "";
+	public static final String UPDATE_BOOK = "";
+	public static final String DELETE_BOOK = "";
+	
+	public static final String GET_BOOK = "";
+	public static final String GET_ALL_BOOK = "";
+	
+}

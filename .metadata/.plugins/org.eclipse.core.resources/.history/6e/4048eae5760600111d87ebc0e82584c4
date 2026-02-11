@@ -1,0 +1,10 @@
+package demo.spring_core.SpringDemo;
+
+public class Ex03Autowiring {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

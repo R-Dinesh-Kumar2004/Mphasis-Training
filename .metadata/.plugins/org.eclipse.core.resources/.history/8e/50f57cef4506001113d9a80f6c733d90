@@ -1,0 +1,25 @@
+package com.hibernate.hql;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.query.Query;
+
+public class NamedQueryDemo {
+
+	public static void main(String[] args) {
+		
+		Session session = HBUtils.getSessionFactory().openSession();
+		
+		Query<Employee> query1 = session.createNamedQuery("Employee.findAll",Employee.class);
+		List<Employee> list1 = query1.getResultList();
+		System.out.println(list1);
+		
+		Query<Employee> query1 = session.createNamedQuery("Employee.findAll",Employee.class);
+		List<Employee> list1 = query1.getResultList();
+		System.out.println(list1);
+		
+		session.close();
+	}
+
+}

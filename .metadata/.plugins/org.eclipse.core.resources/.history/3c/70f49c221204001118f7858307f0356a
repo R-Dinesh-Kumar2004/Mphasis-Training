@@ -1,0 +1,20 @@
+package com.hibernate.inh.single;
+
+import org.hibernate.Session;
+
+import com.hibernate.utils.HBUtils;
+
+public class SingleTableGetDemo {
+
+	public static void main(String[] args) {
+		
+		Session session = HBUtils.getSessionFactory().openSession();
+		
+		//get 1 contract employee
+		ContractEmployee contractEmployee = session.get(ContractEmployee.class, 3);
+		System.out.println(contractEmployee);
+		
+		session.close();
+	}
+
+}

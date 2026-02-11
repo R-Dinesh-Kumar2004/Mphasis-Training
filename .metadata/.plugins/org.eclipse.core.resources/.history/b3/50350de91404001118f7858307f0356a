@@ -1,0 +1,54 @@
+package com.hibernate.inh.joined;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.PrimaryKeyJoinColumn;
+
+@Entity
+@PrimaryKeyJoinColumn()
+public class ContractEmployee102 extends Employee102 {
+
+	private float hourlyRate;
+
+	@Column(length = 50)
+	private String duration;
+
+	public ContractEmployee102() {
+		super();
+	}
+
+	public ContractEmployee102(int id, String name, float hourlyRate, String duration) {
+		super(id, name);
+		this.hourlyRate = hourlyRate;
+		this.duration = duration;
+	}
+
+	public ContractEmployee102(String name, float hourlyRate, String duration) {
+		super(name);
+		this.hourlyRate = hourlyRate;
+		this.duration = duration;
+	}
+
+	public float getHourlyRate() {
+		return hourlyRate;
+	}
+
+	public void setHourlyRate(float hourlyRate) {
+		this.hourlyRate = hourlyRate;
+	}
+
+	public String getDuration() {
+		return duration;
+	}
+
+	public void setDuration(String duration) {
+		this.duration = duration;
+	}
+
+	@Override
+	public String toString() {
+		return "\nContractEmployee [hourlyRate=" + hourlyRate + ", duration=" + duration + ", toString()="
+				+ super.toString() + "]";
+	}
+
+}

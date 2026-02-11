@@ -1,0 +1,8 @@
+package demo.spring_core.java_config;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class JavaConfiguration {
+	
+}

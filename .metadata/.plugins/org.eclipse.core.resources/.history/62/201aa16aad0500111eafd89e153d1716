@@ -1,0 +1,16 @@
+package com.hibernate.hql;
+
+import java.math.BigDecimal;
+import java.sql.Date;
+
+import org.hibernate.Session;
+
+public class App {
+
+	public static void main(String[] args) {
+		Session session = HBUtils.getSessionFactory().openSession();
+		
+		Employee employee = new Employee("Raj", new BigDecimal(95000), 140, Date.valueOf("2028-01-01"), true, 6, 'B');
+	}
+
+}

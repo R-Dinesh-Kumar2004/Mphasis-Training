@@ -1,0 +1,22 @@
+package com.hibernate.many_to_many;
+
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import com.hibernate.utils.HBUtils;
+
+public class ManyToManyDemo {
+
+	public static void main(String[] args) {
+		
+		Session session = HBUtils.getSessionFactory().openSession();
+		Transaction transaction = session.beginTransaction();
+		
+		Course c1 = new Course("Spring",);
+		
+		transaction.commit();
+		session.close();
+	}
+
+}

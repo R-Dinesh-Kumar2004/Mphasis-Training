@@ -1,0 +1,27 @@
+package com.hibernate.hql;
+
+import java.math.BigDecimal;
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.query.Query;
+
+public class NamedQueryDemo {
+
+	public static void main(String[] args) {
+		
+		Session session = HBUtils.getSessionFactory().openSession();
+		
+		Query<Employee> query1 = session.createNamedQuery("Employee.findAll",Employee.class);
+		List<Employee> list1 = query1.getResultList();
+//		System.out.println(list1);
+		
+		Query<Employee> query2 = session.createNamedQuery("Employee.findBySalary",Employee.class);
+		query2.setParameter("sal", new BigDecimal(95000));
+		List<Employee> list2 = query2.getResultList();
+		System.out.println(list2);
+		
+		session.close();
+	}
+
+}

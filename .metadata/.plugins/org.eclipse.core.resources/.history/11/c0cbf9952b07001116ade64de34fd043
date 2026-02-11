@@ -1,0 +1,10 @@
+package demo.spring.jdbc.utils;
+
+public class DBUtils {
+	public static final String CREATE_SCHEMA = "";
+	public static final String CREATE_SCHEMA = "";
+	public static final String CREATE_SCHEMA = "";
+	public static final String CREATE_SCHEMA = "";
+	public static final String CREATE_SCHEMA = "";
+	
+}

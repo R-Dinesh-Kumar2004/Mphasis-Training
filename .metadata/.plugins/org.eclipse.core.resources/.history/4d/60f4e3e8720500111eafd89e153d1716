@@ -1,0 +1,10 @@
+package com.hibernate.onetoone;
+
+import jakarta.persistence.Entity;
+
+@Entityn
+public class Employee {
+	private int id;
+	private String name;
+	
+}

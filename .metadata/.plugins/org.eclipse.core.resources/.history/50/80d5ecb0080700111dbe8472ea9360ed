@@ -1,0 +1,16 @@
+package demo.spring_core.life_cycle;
+
+public class Trainer {
+	private String name;
+	private String subject;
+	public Trainer() {
+		super();
+	}
+	public Trainer(String name, String subject) {
+		super();
+		this.name = name;
+		this.subject = subject;
+	}
+	
+	
+}

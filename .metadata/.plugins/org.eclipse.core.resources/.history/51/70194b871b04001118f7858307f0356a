@@ -1,0 +1,29 @@
+package com.hibernate.inh.tableperclass;
+
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+
+public classTableDemo {
+
+	public static void main(String[] args) {
+		
+		Session session = new Configuration().configure("com/hibernate/inh/tableperclass/cfg.xml").buildSessionFactory().openSession();
+
+		Transaction transaction = session.beginTransaction();
+		
+		Employee103 employee = new Employee103("Yash");
+		RegularEmployee103 regularEmployee = new RegularEmployee103("Gowtham", 30000, 1000);
+		ContractEmployee103 contractEmployee = new ContractEmployee103("Kastubh", 500, "3 months");
+		
+		session.persist(employee);
+		session.persist(regularEmployee);
+		session.persist(contractEmployee);
+		
+		transaction.commit();
+		session.close();
+	}
+
+}

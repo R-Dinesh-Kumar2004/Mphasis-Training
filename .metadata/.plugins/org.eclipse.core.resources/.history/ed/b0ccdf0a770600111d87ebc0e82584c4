@@ -1,0 +1,19 @@
+package demo.spring_core.SpringDemo;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import demo.spring_core.model.Certificate;
+import demo.spring_core.model.Student;
+
+public class Ex01SpringCoreDemo {
+    public static void main( String[] args ){
+        ApplicationContext context = new ClassPathXmlApplicationContext("demo/spring_core/SpringDemo/spring.xml");
+        
+        Certificate certificate = (Certificate) context.getBean("cert1");
+        System.out.println(certificate);
+        
+//        Student student = (Student) context.getBean("student");
+//        System.out.println(student);
+    }
+}

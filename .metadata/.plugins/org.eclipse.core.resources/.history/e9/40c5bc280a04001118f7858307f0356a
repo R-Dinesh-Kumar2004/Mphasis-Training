@@ -1,0 +1,15 @@
+package com.hibernate.inh.single;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
+
+@Entity
+@DiscriminatorValue(value = "contract-employee")
+public class ContractEmployee {
+	private float hourlyRate;
+	@Column(length = 50)
+	private String duration;
+	
+	
+}

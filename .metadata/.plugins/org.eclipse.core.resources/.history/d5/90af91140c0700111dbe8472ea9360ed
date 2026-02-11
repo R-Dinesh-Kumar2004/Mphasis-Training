@@ -1,0 +1,18 @@
+package demo.spring_core.life_cycle;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class BeanLifeCycleDemo {
+
+	public static void main(String[] args) {
+		ApplicationContext context = new ClassPathXmlApplicationContext("demo/spring_core/life_cycle/spring.xml");
+		
+		Trainer trainer = (Trainer) context.getBean("trainer");
+//		System.out.println(trainer);
+		
+		Course course = (Course) context.getBean("course");
+		System.out.println();
+	}
+
+}

@@ -1,0 +1,63 @@
+package com.hibernate.one_to_one;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
+public class Laptop {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	private String brand;
+	private String serialNumber;
+
+	public Laptop() {
+		super();
+	}
+
+	public Laptop(String brand, String serialNumber) {
+		super();
+		this.brand = brand;
+		this.serialNumber = serialNumber;
+	}
+
+	public Laptop(int id, String brand, String serialNumber) {
+		super();
+		this.id = id;
+		this.brand = brand;
+		this.serialNumber = serialNumber;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getBrand() {
+		return brand;
+	}
+
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+
+	public String getSerialNumber() {
+		return serialNumber;
+	}
+
+	public void setSerialNumber(String serialNumber) {
+		this.serialNumber = serialNumber;
+	}
+
+	@Override
+	public String toString() {
+		return "Laptop [id=" + id + ", brand=" + brand + "]";
+	}
+
+}

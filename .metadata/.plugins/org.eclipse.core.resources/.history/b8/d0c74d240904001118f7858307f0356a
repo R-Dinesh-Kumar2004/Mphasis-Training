@@ -1,0 +1,21 @@
+package com.hibernate.inh.single;
+
+import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
+
+@Entity
+@DiscriminatorValue(value = "regular-employee")
+public class RegularEmployee extends Employee{
+	private float salary;
+	private int bonus;
+	public RegularEmployee() {
+		super();
+	}
+	public RegularEmployee(float salary, int bonus) {
+		super();
+		this.salary = salary;
+		this.bonus = bonus;
+	}
+	
+	
+}

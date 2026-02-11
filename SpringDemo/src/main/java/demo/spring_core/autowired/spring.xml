@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="certificate" class="demo.spring_core.model.Certificate">
+		<property name="id">
+			<value>101</value>
+		</property>
+		<property name="title">
+			<value>OCJP</value>
+		</property>
+		<property name="fees">
+			<value>25000</value>
+		</property>
+	</bean>
+	
+<!-- 	<bean name="certificate1" class="demo.spring_core.model.Certificate"> -->
+<!-- 		<constructor-arg name="id"> -->
+<!-- 		<value>102</value> -->
+<!-- 		</constructor-arg> -->
+<!-- 		<constructor-arg name="title" value="OCJA"/> -->
+<!-- 		<constructor-arg name="fees" type="double" value="12000"></constructor-arg> -->
+<!-- 	</bean> -->
+
+	<bean name="student" class="demo.spring_core.model.Student" autowire="byType">
+		<property name="id" value="101" />
+		<property name="name" value="Mohan" />
+		<property name="subjects">
+			<array>
+				<value>Math</value>
+				<value>Science</value>
+				<value>Biology</value>
+				<value>Physics</value>
+			</array>
+		</property>
+		<property name="activities">
+			<list>
+				<value>Cricket</value>
+				<value>Gym</value>
+				<value>Learning</value>
+			</list>
+		</property>
+		<property name="scores">
+			<map>
+				<entry key="SpellBee" value="98" />
+				<entry key="Math Olympiad" value="95" />
+				<entry key="Annual Exam" value="85" />
+			</map>
+		</property>
+	</bean>
+
+</beans>

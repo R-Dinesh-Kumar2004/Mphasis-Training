@@ -1,0 +1,24 @@
+package com.hibernate.one_to_many;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import com.hibernate.utils.HBUtils;
+
+public class GetAndUpdateDemo {
+
+	public static void main(String[] args) {
+		
+		Session session = HBUtils.getSessionFactory().openSession();
+		Transaction transaction = session.beginTransaction();
+		
+		Student student = session.get(Student.class, 1);
+		System.out.println(student);
+		
+		
+		
+		transaction.commit();
+		session.close();
+	}
+
+}

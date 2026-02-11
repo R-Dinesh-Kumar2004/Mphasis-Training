@@ -1,0 +1,33 @@
+package com.hibernate.HibernateDemo;
+
+import java.math.BigDecimal;
+import java.sql.Date;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.hibernate.entities.Address;
+import com.hibernate.entities.Employee;
+import com.hibernate.utils.HBUtils;
+
+public class Ex03InsertMultipleEmployee {
+    public static void main( String[] args )
+    {
+  
+        
+        Session session = HBUtils.getSessionFactory().openSession();
+        
+        Transaction transaction = session.beginTransaction();
+        
+        Address address = new Address("Coimbatore", "Tamil Nadu", "India");
+        Employee employee = 
+        
+        session.persist(employee);
+        
+        transaction.commit();
+        
+        session.close();
+    }
+}

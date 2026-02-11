@@ -1,0 +1,33 @@
+package com.jdbc.demo;
+
+import java.sql.SQLException;
+
+import com.dao.EmployeeDao;
+import com.model.Employee;
+
+public class EX01CreateSchema {
+
+	public static void main(String[] args) {
+		EmployeeDao employeeDao = new EmployeeDao() {
+			
+			@Override
+			public int insertEmployee(Employee employee) throws SQLException {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+			
+			@Override
+			public int createTable() throws SQLException {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+			
+			@Override
+			public int createSchema(String schema) throws SQLException {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+		};
+	}
+
+}

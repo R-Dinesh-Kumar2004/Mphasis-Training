@@ -1,0 +1,71 @@
+package com.hibernate.many_to_many;
+
+import java.util.List;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
+
+@Entity
+public class Course {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+
+	@Column(length = 50)
+	private String title;
+
+	@ManyToMany(mappedBy = "courses")
+	private List<Trainee> trainees;
+
+	public Course() {
+		super();
+	}
+
+	public Course(String title, List<Trainee> trainees) {
+		super();
+		this.title = title;
+		this.trainees = trainees;
+	}
+
+	public Course(int id, String title, List<Trainee> trainees) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.trainees = trainees;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public List<Trainee> getTrainees() {
+		return trainees;
+	}
+
+	public void setTrainees(List<Trainee> trainees) {
+		this.trainees = trainees;
+	}
+
+	@Override
+	public String toString() {
+		return "Course [id=" + id + ", title=" + title + "]";
+	}
+
+}

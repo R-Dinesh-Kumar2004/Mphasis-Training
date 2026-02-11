@@ -1,0 +1,10 @@
+package demo.spring_core.autowired;
+
+public class Ex03Autowiring {
+
+	public static void main(String[] args) {
+		
+		
+	}
+
+}

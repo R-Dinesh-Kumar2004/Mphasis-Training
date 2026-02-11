@@ -1,0 +1,50 @@
+package com.dao;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.dbutil.DBUtil;
+import com.model.Employee;
+
+public class EmployeeDaoImpl implements EmployeeDao{
+
+	@Override
+	public int createSchema() throws SQLException {
+		int result = 0;
+		
+		try(Connection connection = DBUtil.getConnection();
+				Statement stmt = connection.createStatement();
+				){
+			result = stmt.executeUpdate(DBUtil.SCHEMA);
+		}
+		
+		return result;
+	}
+
+	@Override
+	public int createTable() throws SQLException {
+		int result = 0;
+		
+		try(Connection connection = DBUtil.getConnection();
+				Statement stmt = connection.createStatement();
+				){
+			result = stmt.executeUpdate(DBUtil.SCHEMA);
+		}
+		
+		return result;
+	}
+
+	@Override
+	public int insertEmployee(Employee employee) throws SQLException {
+		int result = 0;
+		
+		try(Connection connection = DBUtil.getConnection();
+				){
+			
+		}
+		
+		return result;
+	}
+	
+}

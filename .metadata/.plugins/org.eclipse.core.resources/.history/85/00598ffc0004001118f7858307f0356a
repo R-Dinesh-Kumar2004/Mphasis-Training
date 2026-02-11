@@ -1,0 +1,22 @@
+package com.hibernate.HibernateDemo;
+
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.query.Query;
+
+import com.hibernate.entities.Employee;
+import com.hibernate.utils.HBUtils;
+
+public class Ex04GetMultipleEmployee {
+    public static void main( String[] args )
+    {
+        Session session = HBUtils.getSessionFactory().openSession();
+        
+        @SuppressWarnings("deprecation")
+		Query<Employee> employees = session.createQuery("from employees");
+        
+        session.close();
+    }
+}

@@ -1,0 +1,28 @@
+package com.hibernate.HibernateDemo;
+
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.query.Query;
+
+import com.hibernate.entities.Employee;
+import com.hibernate.utils.HBUtils;
+
+public class Ex05UpdateDeleteEmployee {
+    public static void main( String[] args )
+    {
+        Session session = HBUtils.getSessionFactory().openSession();
+        
+        Transaction transaction = session.beginTransaction();
+        
+		Query<Employee> empQuery = session.createQuery("from Employee",Employee.class);
+        List<Employee> employees = empQuery.getResultList();
+        
+        employees.forEach(emp -> System.out.println(emp));
+        
+        transaction.commit();
+        session.close();
+    }
+}

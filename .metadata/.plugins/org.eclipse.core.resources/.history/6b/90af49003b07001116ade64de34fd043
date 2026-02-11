@@ -1,0 +1,65 @@
+package demo.spring.jdbc;
+
+import java.sql.Date;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import demo.spring.jdbc.dao.BookDao;
+import demo.spring.jdbc.dao.BookDaoImpl;
+import demo.spring.jdbc.dao.model.Book;
+
+public class SpringJDBCDemo {
+    public static void main( String[] args ) {
+    	
+        ApplicationContext context = null;
+        
+        
+        //reading from XML 
+//        context = new ClassPathXmlApplicationContext("demo/spring/jdbc/spring.xml");
+        
+        //reading from java configuration file
+        context = new AnnotationConfigApplicationContext(JavaConfigurationFile.class);  
+        BookDao bookDao = context.getBean(BookDaoImpl.class);
+        
+        //create schema
+//        try {
+//			bookDao.createSchema();
+//			System.out.println("\n Schema created successfully");
+//		} catch (Exception e) {
+//			System.out.println("\n Schema not created");
+//			e.printStackTrace();
+//		}
+        
+        //create table
+//        try {
+//			bookDao.createTable();
+//			System.out.println("\n Table created successfully");
+//		} catch (Exception e) {
+//			System.out.println("\n Table not created");
+//			e.printStackTrace();
+//		}
+        
+        // insert data
+//        try {
+//			bookDao.insertBook(new Book("Java", 100, 50, true, Date.valueOf("1999-11-01")));
+//			System.out.println("\n Book inserted...");
+//		} catch (Exception e) {
+//			System.out.println("\n Book not inserted...");
+//			e.printStackTrace();
+//		}
+        
+        // get book by id and name
+        try {
+			Book book = bookDao.getOneBook(1);
+			System.out.println(book);
+			
+			Book book2 = bookDao.getOneBook("Java");
+			
+		} catch (Exception e) {
+			System.out.println("\n Book not inserted...");
+			e.printStackTrace();
+		}
+    }
+}

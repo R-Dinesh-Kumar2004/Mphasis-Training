@@ -1,0 +1,25 @@
+package demo.spring.jdbc.utils;
+
+public class DbUtils {
+
+	public static final String CREATE_SCHEMA = "CREATE SCHEMA spring_jdbc_demo";
+	public static final String CREATE_TABLE = "CREATE TABLE `spring_jdbc_demo`.`books` (\r\n"
+			+ "  `book_id` INT NOT NULL AUTO_INCREMENT,\r\n"
+			+ "  `book_name` VARCHAR(45) NOT NULL,\r\n"
+			+ "  `book_price` DECIMAL(6,2) NULL,\r\n"
+			+ "  `no_of_copies` INT NULL,\r\n"
+			+ "  `in_stock` BIT(1) NULL,\r\n"
+			+ "  `date_of_publication` DATE NULL,\r\n"
+			+ "  PRIMARY KEY (`book_id`),\r\n"
+			+ "  UNIQUE INDEX `book_id_UNIQUE` (`book_id` ASC) VISIBLE,\r\n"
+			+ "  UNIQUE INDEX `book_name_UNIQUE` (`book_name` ASC) VISIBLE)";
+	
+	public static final String INSERT_BOOK = "INSERT INTO `spring_jdbc_demo`.`books` \r\n"
+			+ "  (`book_name`, `book_price`, `no_of_copies`, `in_stock`, `date_of_publication`) \r\n"
+			+ "  VALUES (?, ?, ?, ?, ?)";
+	public static final String UPDATE_BOOK = "UPDATE `spring_jdbc_demo`.`books` SET no_of_copies = ? , in_stock = ? where book_id = ?";
+	public static final String DELETE_BOOK = "DELETE FROM `spring_jdbc_demo`.`books` WHERE book_id = ?";
+	
+	public static final String GET_BOOK = "SELECT * FROM `spring_jdbc_demo`.`books` WHERE book_id = ?";
+	public static final String GET_ALL_BOOKS = "SELECT * FROM `spring_jdbc_demo`.`books`";
+}

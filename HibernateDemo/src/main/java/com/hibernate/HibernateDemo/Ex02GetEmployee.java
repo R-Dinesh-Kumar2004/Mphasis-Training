@@ -1,0 +1,25 @@
+package com.hibernate.HibernateDemo;
+
+
+import org.hibernate.Session;
+
+import com.hibernate.entities.Employee;
+import com.hibernate.utils.HBUtils;
+
+public class Ex02GetEmployee {
+    public static void main( String[] args )
+    {
+        Session session = HBUtils.getSessionFactory().openSession();
+        
+        //get
+        Employee employee = session.get(Employee.class,10);
+        System.out.println(employee);
+        
+        //load
+        @SuppressWarnings("deprecation")
+		Employee employee2 = session.load(Employee.class, 5);
+        System.out.println(employee2);
+        
+        session.close();
+    }
+}

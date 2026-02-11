@@ -1,0 +1,37 @@
+package demo.spring.jdbc;
+
+import java.io.ObjectInputStream.GetField;
+import java.security.PublicKey;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+
+import demo.spring.jdbc.dao.BookDaoImpl;
+
+public class JavaConfigurationFile {
+
+	public DriverManagerDataSource getDriverManagerDataSource() {
+		DriverManagerDataSource dSource = new DriverManagerDataSource();
+		
+		dSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+		dSource.setUrl("jdbc:mysql://localhost:3306");
+		dSource.setUsername("root");
+		dSource.setPassword("root@39");
+		
+		return dSource;
+	}
+	
+	@Bean
+	public JdbcTemplate getJdbcTemplate() {
+		return new JdbcTemplate(getDriverManagerDataSource());
+	}
+	
+	@Bean
+	public BookDaoImpl getBookDaoImpl() {
+		BookDaoImpl bookDaoImpl = new BookDaoImpl();
+		bookDaoImpl.setJdbcTemplate();
+		
+		return bookDaoImpl;
+	}
+}

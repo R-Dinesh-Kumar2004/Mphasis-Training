@@ -1,0 +1,7 @@
+package demo.spring.jdbc.dao;
+
+import org.springframework.jdbc.core.RowMapper;
+
+public class BookRowMapper implements RowMapper<T> {
+
+}

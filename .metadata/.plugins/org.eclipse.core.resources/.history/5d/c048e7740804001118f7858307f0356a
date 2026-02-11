@@ -1,0 +1,24 @@
+package com.hibernate.inh.single;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.DiscriminatorColumn;
+import jakarta.persistence.DiscriminatorType;
+import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Inheritance;
+import jakarta.persistence.InheritanceType;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="101employee")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "emp-type", discriminatorType = DiscriminatorType.STRING)
+@DiscriminatorValue(value = "employee")
+public class Employee {
+	
+	@Id
+	@Column
+	private int id;
+	private String name;
+}

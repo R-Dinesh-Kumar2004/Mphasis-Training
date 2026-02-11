@@ -1,0 +1,32 @@
+package com.hibernate.hql;
+
+import java.math.BigDecimal;
+import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+
+public class Ex01PrepareData {
+
+	public static void main(String[] args) {
+		
+		Session session = HBUtils.getSessionFactory().openSession();
+		Transaction transaction = session.beginTransaction();
+		
+	    List<Employee> employees = new ArrayList<>();
+	    employees.add(new Employee("Arjun", new BigDecimal(55000), 140, Date.valueOf("2028-01-01"), true, 6, 'B'));
+	    employees.add(new Employee("Rocky", new BigDecimal(5000), 140, Date.valueOf("2018-09-01"), true, 2, 'A'));
+//	    employees.add(new Employee("Harsh", new BigDecimal(95000), 140, Date.valueOf("2020-10-01"), true, 0, 'C'));
+	    
+	    for(Employee employee : employees) {
+	    	session.persist(employee);
+	    }
+	    
+	    transaction.commit();
+	    session.close();
+	}
+
+}

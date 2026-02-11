@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<modules>
+  <module moduleId="org.eclipse.jst.jee.server:Assignment" serverId="Tomcat v11.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:EcomApp" serverId="Tomcat v11.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:SessionManagement" serverId="Tomcat v11.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:RequestResponse" serverId="Tomcat v11.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:JEEPractice" serverId="Tomcat v11.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:JSPPractice" serverId="Tomcat v11.0 Server at localhost"/>
+</modules>

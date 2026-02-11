@@ -1,0 +1,16 @@
+package demo.spring_core.java_config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import demo.spring_core.model.Certificate;
+
+@Configuration
+public class JavaConfiguration {
+	
+	@Bean
+	Certificate getCertificate() {
+		Certificate c1 = new Certificate();
+		c1.setId(3);
+	}
+}

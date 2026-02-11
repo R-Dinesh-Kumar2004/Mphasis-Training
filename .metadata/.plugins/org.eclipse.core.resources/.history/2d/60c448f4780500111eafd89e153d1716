@@ -1,0 +1,22 @@
+package com.hibernate.one_to_one;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import com.hibernate.utils.HBUtils;
+
+public class CRUDDemo {
+
+	public static void main(String[] args) {
+		
+		Session session = HBUtils.getSessionFactory().openSession();
+		Transaction transaction = session.beginTransaction();
+		
+		//Update
+		session.update(args);
+		
+		transaction.commit();
+		session.close();
+	}
+
+}

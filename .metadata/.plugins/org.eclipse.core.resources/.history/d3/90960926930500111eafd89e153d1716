@@ -1,0 +1,35 @@
+package com.hibernate.entities;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.PrimaryKeyJoinColumn;
+
+@Entity
+@PrimaryKeyJoinColumn(name = "user_id")
+public class Admin extends User{
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	
+	@Column(length = 20)
+	private String department;
+	
+	@Column(length = 20)
+	private String accessLevel;
+
+	public Admin(String name, String email, String department, String accessLevel) {
+		super(name, email);
+		this.department = department;
+		this.accessLevel = accessLevel;
+	}
+
+	public Admin() {
+		super();
+	}
+	
+	
+}

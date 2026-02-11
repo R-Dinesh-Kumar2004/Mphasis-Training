@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  padding: 8px 12px;
+  background: #e3e3e3;
+  margin: 4px;
+}
+
+/* horizontal */
+.menu.h {
+  display: flex;
+}
+
+/* vertical */
+.menu.v {
+  width: 200px;
+}

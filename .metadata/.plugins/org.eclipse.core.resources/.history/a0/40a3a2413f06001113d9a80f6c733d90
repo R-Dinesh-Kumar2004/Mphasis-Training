@@ -1,0 +1,95 @@
+package com.hibernate.hql;
+
+import java.math.BigDecimal;
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.query.MutationQuery;
+import org.hibernate.query.Query;
+
+public class HQLDemo {
+
+	public static void main(String[] args) {
+		
+		Session session = HBUtils.getSessionFactory().openSession();
+		
+//		Ex1
+		String hql1 = "from Employee e";
+		Query<Employee> query1 = session.createQuery(hql1,Employee.class);
+		List<Employee> list1 = query1.getResultList();
+//		System.out.println(list1);
+		
+//		Ex2
+		String hql2 = "from Employee e where e.salary > 50000";
+		Query<Employee> query2 = session.createQuery(hql2,Employee.class);
+		List<Employee> list2 = query2.getResultList();
+//		System.out.println(list2);
+		
+//		Ex3
+		String hql3 = "from Employee e where e.salary > :sal and e.grade = :g";
+		Query<Employee> query3 = session.createQuery(hql3,Employee.class);
+		query3.setParameter("sal", new BigDecimal(20000));
+		query3.setParameter("g", 'A');
+		
+		List<Employee> list3 = query3.getResultList();
+//		System.out.println(list3);
+		
+		
+//		Ex4
+		String hql4 = "select e.name from Employee e where e.salary > :sal and e.grade = :g";
+		Query<String> query4 = session.createQuery(hql4,String.class);
+		query4.setParameter("sal", new BigDecimal(20000));
+		query4.setParameter("g", 'A');
+		
+		List<String> list4 = query4.getResultList();
+//		System.out.println(list4);
+		
+//		Ex5
+		String hql5 = "select e.name,e.salary from Employee e";
+		Query<Object[]> query5 = session.createQuery(hql5,Object[].class);
+		List<Object[]> list5 = query5.getResultList();
+		
+		for(Object[] o : list5) {
+			String name = (String)o[0];
+			BigDecimal salary = (BigDecimal)o[1];
+//			System.out.println(name+" "+salary);
+		}
+		
+//		Ex6
+		String hql6 = "select count(e) from Employee e where e.salary > 50000";
+		Query<Long> query6 = session.createQuery(hql6,Long.class);
+		long empCount = query6.getSingleResult();
+//		System.out.println(empCount);
+		
+//		Ex7
+		String hql7 = "select avg(e.salary) from Employee e";
+		Query<Double> query7 = session.createQuery(hql7,Double.class);
+		double avgSalary = query7.getSingleResult();
+//		System.out.println(avgSalary);
+		
+		Transaction transaction = session.beginTransaction();
+		
+//		Ex8
+		String hql8 = "update Employee e set e.isActive = :active where e.name = :name";
+		MutationQuery query8 = session.createMutationQuery(hql8);
+		query8.setParameter("name", "Raj");
+		query8.setParameter("active", false);
+		
+		int res = query8.executeUpdate();
+		System.out.println("Number of rows updated : "+res);
+		
+//		Ex9
+		String hql9 = "update Employee e set e.isActive = :active where e.name = :name";
+		MutationQuery query9 = session.createMutationQuery(hql9);
+		query9.setParameter("name", "Raj");
+		query9.setParameter("active", false);
+		
+		int res9 = query9.executeUpdate();
+		System.out.println("Number of rows updated : "+res9);
+		
+		transaction.commit();
+		session.close();
+	}
+
+}

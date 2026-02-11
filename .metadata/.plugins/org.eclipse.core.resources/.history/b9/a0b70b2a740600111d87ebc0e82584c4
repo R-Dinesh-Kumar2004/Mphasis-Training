@@ -1,0 +1,25 @@
+package demo.spring_core.java_config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import demo.spring_core.model.Certificate;
+import demo.spring_core.model.Student;
+
+@Configuration
+public class JavaConfiguration {
+	
+	@Bean
+	Certificate getCertificate() {
+		Certificate c1 = new Certificate(3,"NPTEL",1000);
+		return c1;
+	}
+	
+	@Bean
+	Student getStudent() {
+		Student s1 = new Student();
+		s1.setId(2);
+		s1.setName("Raj");
+		s1.setActivities("Problem solving", "");
+	}
+}

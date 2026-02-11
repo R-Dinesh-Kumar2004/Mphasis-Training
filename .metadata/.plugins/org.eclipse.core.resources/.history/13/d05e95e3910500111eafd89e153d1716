@@ -1,0 +1,11 @@
+package com.hibernate.entities;
+
+import jakarta.persistence.Column;
+
+public class Admin extends User{
+	
+	@Column(length = )
+	private String department;
+	private String accessLevel;
+	
+}

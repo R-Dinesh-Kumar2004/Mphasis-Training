@@ -1,0 +1,13 @@
+package com.jdbc.demo;
+
+import java.util.Scanner;
+
+public class Ex03InsertEmployee {
+
+	public static void main(String[] args) {
+		Scanner sc = new 
+		System.out.println("Employee name : ");
+		String name = sc
+	}
+
+}

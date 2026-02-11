@@ -1,0 +1,9 @@
+package com.jdbc.demo;
+
+public class Ex03InsertEmployee {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

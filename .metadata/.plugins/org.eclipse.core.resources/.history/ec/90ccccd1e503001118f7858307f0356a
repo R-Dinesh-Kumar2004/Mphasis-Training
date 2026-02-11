@@ -1,0 +1,158 @@
+package com.hibernate.entities;
+
+import java.math.BigDecimal;
+import java.sql.Date;
+
+import jakarta.persistence.AttributeOverride;
+import jakarta.persistence.AttributeOverrides;
+import jakarta.persistence.Column;
+import jakarta.persistence.Embedded;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "employees")
+public class Employee {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	
+	@Column(length = 100, nullable = false, unique = true)
+	private String name;
+	
+	@Column(precision = 7)
+	private BigDecimal ;
+	
+	@Column(nullable = false)
+	private double bonus;
+	private Date joiningDate;
+	
+	@Column(name = "active")
+	private boolean isActive;
+	private int experience;
+	
+	@Column(length = 1)
+	private char grade;
+	
+	@Embedded
+	@AttributeOverrides(
+		{ @AttributeOverride(name="city", column = @Column(name="emp_city")),
+		@AttributeOverride(name="state", column = @Column(name="emp_state")),
+		@AttributeOverride(name="country", column = @Column(name="emp_country"))
+		})
+	private Address address;
+
+	public Employee() {
+		super();
+	}
+
+	public Employee(int id, String name, double salary, double bonus, Date joiningDate, boolean isActive,
+			int experience, char grade, Address address) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+		this.bonus = bonus;
+		this.joiningDate = joiningDate;
+		this.isActive = isActive;
+		this.experience = experience;
+		this.grade = grade;
+		this.address = address;
+	}
+
+	public Employee(String name, double salary, double bonus, Date joiningDate, boolean isActive, int experience,
+			char grade, Address address) {
+		super();
+		this.name = name;
+		this.salary = salary;
+		this.bonus = bonus;
+		this.joiningDate = joiningDate;
+		this.isActive = isActive;
+		this.experience = experience;
+		this.grade = grade;
+		this.address = address;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	public double getBonus() {
+		return bonus;
+	}
+
+	public void setBonus(double bonus) {
+		this.bonus = bonus;
+	}
+
+	public Date getJoiningDate() {
+		return joiningDate;
+	}
+
+	public void setJoiningDate(Date joiningDate) {
+		this.joiningDate = joiningDate;
+	}
+
+	public boolean isActive() {
+		return isActive;
+	}
+
+	public void setActive(boolean isActive) {
+		this.isActive = isActive;
+	}
+
+	public int getExperience() {
+		return experience;
+	}
+
+	public void setExperience(int experience) {
+		this.experience = experience;
+	}
+
+	public char getGrade() {
+		return grade;
+	}
+
+	public void setGrade(char grade) {
+		this.grade = grade;
+	}
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
+	@Override
+	public String toString() {
+		return "\nEmployee [id=" + id + ", name=" + name + ", salary=" + salary + ", bonus=" + bonus + ", joiningDate="
+				+ joiningDate + ",isActive=" + isActive + ", experience=" + experience + ", grade=" + grade
+				+ ", address=" + address + "]";
+	}
+}

@@ -1,0 +1,30 @@
+package com.jdbc.demo;
+
+import java.sql.SQLException;
+
+import com.dao.EmployeeDao;
+import com.dao.EmployeeDaoImpl;
+import com.model.Employee;
+
+public class EX01CreateSchema {
+
+	public static void main(String[] args) {
+		EmployeeDao employeeDao = new EmployeeDaoImpl();
+		
+		int result;
+		try {
+			result = employeeDao.createSchema();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		if(result == 1) {
+			System.out.println("Schema is created successfully.");
+		}
+		else {
+			System.out.println("Schema can't be created");
+		}
+	}
+
+}

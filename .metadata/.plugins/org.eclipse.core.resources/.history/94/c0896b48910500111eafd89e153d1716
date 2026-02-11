@@ -1,0 +1,11 @@
+package com.hibernate.entities;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.PrimaryKeyJoinColumn;
+
+@Entity
+@PrimaryKeyJoinColumn()
+public class Student {
+	private String course;
+	private float feesPaid;
+}

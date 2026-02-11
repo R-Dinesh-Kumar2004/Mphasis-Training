@@ -1,0 +1,29 @@
+package com.hibernate.one_to_one;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import com.hibernate.utils.HBUtils;
+
+public class CRUDDemo {
+
+	public static void main(String[] args) {
+		
+		Session session = HBUtils.getSessionFactory().openSession();
+		Transaction transaction = session.beginTransaction();
+		
+		//Update
+//		Employee employee = session.get(Employee.class, 1);
+//		employee.getLaptop().setBrand("MAC");
+		
+		//Delete
+//		session.remove(employee);
+		
+		Laptop laptop = session.get(Laptop.class, 3);
+		session.remove(laptop);
+		
+		transaction.commit();
+		session.close();
+	}
+
+}

@@ -1,0 +1,28 @@
+package com.hibernate.one_to_many;
+
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+
+@Entity
+public class Certificate {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	private String title;
+	
+	@ManyToOne(cascade = CascadeType.ALL)
+	private List<Student> students;
+
+	public Certificate() {
+		super();
+	}
+
+	
+}

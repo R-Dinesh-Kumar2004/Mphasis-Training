@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sync Async Demo</title>
+</head>
+<body>
+	<h3>Pune : </h3>
+	<h4>Temperature : <span id="temp">---</span><sup>o</sup>C</h4>
+	
+	<script>
+		function fetchSync(){
+			const xhr = new XMLHttpRequest();
+			xhr.open("GET","temperature",false);
+			xhr.send();
+			
+			document.getElementById("temp").innerText = xhr.responseText;
+		}
+		
+		async function fetchAsync(){
+			const response = await fetch("temperature");
+			const data = await response.text();
+			document.getElementById("temp").innerText = data;
+		}
+		
+		setInterval(fetchAsync(),2000);
+		
+		function print(){
+			console.log("Printing...");
+		}
+		
+	</script>	
+	<button onclick="print()">Get</button>
+</body>
+</html>

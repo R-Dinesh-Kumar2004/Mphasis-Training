@@ -1,0 +1,46 @@
+package demo.spring.jdbc;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+
+import demo.spring.jdbc.dao.BookDaoImpl;
+
+@Configuration
+public class JavaConfigurationFile {
+	@Bean
+	public DriverManagerDataSource getDriverManagerDataSource() {
+		DriverManagerDataSource ds = new DriverManagerDataSource();
+		ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
+		ds.setUrl("jdbc:mysql://localhost:3306");
+		ds.setUsername("root");
+		ds.setPassword("root@39");
+		return ds;
+	}
+
+	@Bean
+	public JdbcTemplate getJdbcTemplate() {
+		return new JdbcTemplate(getDriverManagerDataSource());
+	}
+
+	@Bean
+	public BookDaoImpl getBookDaoImpl() {
+		BookDaoImpl daoImpl = new BookDaoImpl();
+		daoImpl.setJdbcTemplate(getJdbcTemplate());
+		return daoImpl;
+	}
+	
+	@Bean
+	public NamedParameterJdbcTemplate geNamedParameterJdbcTemplate() {
+		return new NamedParameterJdbcTemplate(getDriverManagerDataSource())
+	}
+
+	@Bean
+	public BookDaoImpl getBookDaoImpl() {
+		BookDaoImpl daoImpl = new BookDaoImpl();
+		daoImpl.setJdbcTemplate(getJdbcTemplate());
+		return daoImpl;
+	}
+}

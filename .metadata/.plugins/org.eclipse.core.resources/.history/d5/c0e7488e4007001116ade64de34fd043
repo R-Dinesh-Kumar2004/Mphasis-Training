@@ -1,0 +1,25 @@
+package demo.spring.jdbc.dao;
+
+import java.util.List;
+
+
+import demo.spring.jdbc.dao.model.Book;
+
+public interface BookDao {
+	
+	void createSchema();
+
+	void createTable();
+
+	int insertBook(Book book);
+
+	boolean modifyBook(Book book);
+
+	Book getOneBook(int bookId);
+
+	Book getOneBook(String bookName);
+
+	List<Book> getAllBooks();
+	
+	void deleteBook(int );
+}

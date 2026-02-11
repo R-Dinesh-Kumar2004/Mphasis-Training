@@ -1,0 +1,20 @@
+package com.hibernate.HibernateAssignment;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import com.hibernate.entities.Trainer;
+import com.hibernate.utils.HBUtils;
+
+public class CRUDDemo {
+    public static void main( String[] args ){
+    	
+    	Session session = HBUtils.getSessionFactory().openSession();
+    	Transaction transaction = session.beginTransaction();
+    	
+    	Trainer t1 = new Trainer("Raj", "raj@gmail.com", null, 0)
+    	
+    	transaction.commit();
+    	session.close();
+    }
+}

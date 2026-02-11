@@ -1,0 +1,26 @@
+package com.hibernate.inh.joined;
+
+import java.util.List;
+
+import org.hibernate.Session;
+
+import com.hibernate.utils.HBUtils;
+
+public class JoinedTableGetDemo {
+
+	public static void main(String[] args) {
+		
+		Session session = HBUtils.getSessionFactory().openSession();
+		
+		//get 1 contract employee
+		ContractEmployee102 contractEmployee = session.get(ContractEmployee102.class, 3);
+		System.out.println(contractEmployee);
+		
+		//get list of contract employee
+		List<ContractEmployee102> emp = session.createQuery("from ContractEmployee",ContractEmployee102.class).getResultList();
+		emp.forEach(System.out::println);
+		
+		session.close();
+	}
+
+}

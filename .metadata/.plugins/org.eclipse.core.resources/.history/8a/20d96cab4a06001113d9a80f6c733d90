@@ -1,0 +1,9 @@
+package com.hibernate.hql;
+
+public class CriteriaQueryDemo {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

@@ -1,0 +1,7 @@
+package com.hibernate.onetoone;
+
+public class Employee {
+	private int id;
+	private String name;
+	
+}

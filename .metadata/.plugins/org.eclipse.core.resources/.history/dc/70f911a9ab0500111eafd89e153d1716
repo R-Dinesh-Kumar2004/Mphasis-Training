@@ -1,0 +1,8 @@
+package com.hibernate.hql;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class Employee {
+	private int id;
+}

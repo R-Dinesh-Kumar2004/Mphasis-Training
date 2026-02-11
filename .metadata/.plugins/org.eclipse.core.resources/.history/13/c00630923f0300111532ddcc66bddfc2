@@ -1,0 +1,9 @@
+package com.jdbc.demo;
+
+public class EX01CreateSchema {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

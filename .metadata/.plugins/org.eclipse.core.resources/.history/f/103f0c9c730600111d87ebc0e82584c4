@@ -1,0 +1,5 @@
+package demo.spring_core.java_config;
+
+public class JavaConfiguration {
+	
+}

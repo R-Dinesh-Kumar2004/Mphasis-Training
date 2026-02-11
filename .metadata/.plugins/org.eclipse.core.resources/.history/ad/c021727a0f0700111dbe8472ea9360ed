@@ -1,0 +1,19 @@
+package demo.spring_core.life_cycle;
+
+import org.jspecify.annotations.Nullable;
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.config.BeanPostProcessor;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class BeanScopeDemo {
+	
+	public static void main(String[] args) {
+		ApplicationContext context = new ClassPathXmlApplicationContext("demo/spring_core/life_cycle/spring.xml");
+		
+		Trainer trainer = (Trainer) context.getBean("trainer");
+		System.out.println(trainer);
+		
+		Course course = (Course) co
+	}
+}
