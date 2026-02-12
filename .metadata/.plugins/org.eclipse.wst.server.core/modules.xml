@@ -4,6 +4,7 @@
   <module moduleId="org.eclipse.jst.jee.server:EcomApp" serverId="Tomcat v11.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:SessionManagement" serverId="Tomcat v11.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:RequestResponse" serverId="Tomcat v11.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.j2ee.server:BookManagementApp" serverId="Tomcat v11.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:JEEPractice" serverId="Tomcat v11.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:JSPPractice" serverId="Tomcat v11.0 Server at localhost"/>
 </modules>

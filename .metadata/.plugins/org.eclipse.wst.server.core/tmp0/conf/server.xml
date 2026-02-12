@@ -136,7 +136,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="C:\Users\dinesh.r6\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\dinesh.r6\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\EcomApp" path="/EcomApp" reloadable="true" source="org.eclipse.jst.jee.server:EcomApp"/><Context docBase="C:\Users\dinesh.r6\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\JEEPractice" path="/JEEPractice" reloadable="true" source="org.eclipse.jst.jee.server:JEEPractice"/></Host>
+      <Context docBase="C:\Users\dinesh.r6\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\dinesh.r6\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\BookManagementApp" path="/BookManagementApp" reloadable="true" source="org.eclipse.jst.j2ee.server:BookManagementApp"/></Host>
     </Engine>
   </Service>
 </Server>
