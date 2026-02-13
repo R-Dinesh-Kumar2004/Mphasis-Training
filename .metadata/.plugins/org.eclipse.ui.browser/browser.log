@@ -463,3 +463,52 @@ Feb 06, 2026 12:01:26.51 [4104:11692:0206/120126.513:ERROR:google_apis\gcm\engin
 Feb 06, 2026 12:11:26.56 [4104:11692:0206/121126.565:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:483] ConnectionHandler failed with net error: -2
 Feb 06, 2026 12:21:47.63 [4104:11692:0206/122147.635:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:434] Failed to connect to MCS endpoint with error -118
 Feb 06, 2026 12:31:47.67 [4104:11692:0206/123147.676:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:483] ConnectionHandler failed with net error: -2
+
+Feb 13, 2026 09:21:54.29 NEW SESSION
+Feb 13, 2026 09:21:54.30 Created TensorFlow Lite XNNPACK delegate for CPU.
+Feb 13, 2026 09:22:00.27 [15764:16956:0213/092200.273:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+Feb 13, 2026 09:22:21.19 [15764:16956:0213/092221.199:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:434] Failed to connect to MCS endpoint with error -118
+Feb 13, 2026 09:22:30.00 [15764:16956:0213/092230.003:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+Feb 13, 2026 09:22:50.41 [15764:16956:0213/092250.417:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:483] ConnectionHandler failed with net error: -2
+Feb 13, 2026 09:23:15.40 [15764:16956:0213/092315.404:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+Feb 13, 2026 09:23:51.75 [15764:16956:0213/092351.751:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:434] Failed to connect to MCS endpoint with error -118
+Feb 13, 2026 09:24:46.85 [15764:16956:0213/092446.858:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+Feb 13, 2026 09:25:41.16 [15764:16956:0213/092541.163:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:483] ConnectionHandler failed with net error: -2
+Feb 13, 2026 09:28:46.56 [15764:16956:0213/092846.561:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+Feb 13, 2026 09:29:02.89 [15764:16956:0213/092902.889:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:434] Failed to connect to MCS endpoint with error -118
+Feb 13, 2026 09:34:26.38 [15764:16956:0213/093426.382:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+Feb 13, 2026 09:35:29.28 [15764:16956:0213/093529.285:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:483] ConnectionHandler failed with net error: -2
+Feb 13, 2026 09:45:50.31 [15764:16956:0213/094550.314:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:434] Failed to connect to MCS endpoint with error -118
+Feb 13, 2026 09:55:50.37 [15764:16956:0213/095550.372:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:483] ConnectionHandler failed with net error: -2
+Feb 13, 2026 10:00:10.07 [15764:1968:0213/100010.076:ERROR:net\dns\dns_config_service.cc:273] DNS config watch failed.
+Feb 13, 2026 10:06:11.41 [15764:16956:0213/100611.414:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:434] Failed to connect to MCS endpoint with error -118
+Feb 13, 2026 10:16:11.45 [15764:16956:0213/101611.457:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:483] ConnectionHandler failed with net error: -2
+Feb 13, 2026 10:26:32.53 [15764:16956:0213/102632.535:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:434] Failed to connect to MCS endpoint with error -118
+Feb 13, 2026 10:36:32.57 [15764:16956:0213/103632.574:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:483] ConnectionHandler failed with net error: -2
+Feb 13, 2026 10:46:53.61 [15764:16956:0213/104653.608:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:434] Failed to connect to MCS endpoint with error -118
+Feb 13, 2026 10:56:53.72 [15764:16956:0213/105653.720:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:483] ConnectionHandler failed with net error: -2
+Feb 13, 2026 11:07:14.76 [15764:16956:0213/110714.763:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:434] Failed to connect to MCS endpoint with error -118
+Feb 13, 2026 11:17:14.80 [15764:16956:0213/111714.801:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:483] ConnectionHandler failed with net error: -2
+Feb 13, 2026 11:27:35.85 [15764:16956:0213/112735.853:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:434] Failed to connect to MCS endpoint with error -118
+Feb 13, 2026 11:37:35.89 [15764:16956:0213/113735.891:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:483] ConnectionHandler failed with net error: -2
+Feb 13, 2026 11:47:56.93 [15764:16956:0213/114756.937:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:434] Failed to connect to MCS endpoint with error -118
+Feb 13, 2026 11:57:56.99 [15764:16956:0213/115756.998:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:483] ConnectionHandler failed with net error: -2
+Feb 13, 2026 12:08:18.05 [15764:16956:0213/120818.058:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:434] Failed to connect to MCS endpoint with error -118
+Feb 13, 2026 12:18:18.10 [15764:16956:0213/121818.107:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:483] ConnectionHandler failed with net error: -2
+Feb 13, 2026 12:28:39.16 [15764:16956:0213/122839.161:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:434] Failed to connect to MCS endpoint with error -118
+Feb 13, 2026 12:38:39.23 [15764:16956:0213/123839.227:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:483] ConnectionHandler failed with net error: -2
+Feb 13, 2026 12:49:00.26 [15764:16956:0213/124900.263:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:434] Failed to connect to MCS endpoint with error -118
+Feb 13, 2026 12:59:00.31 [15764:16956:0213/125900.316:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:483] ConnectionHandler failed with net error: -2
+Feb 13, 2026 13:09:21.38 [15764:16956:0213/130921.387:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:434] Failed to connect to MCS endpoint with error -118
+Feb 13, 2026 13:19:21.42 [15764:16956:0213/131921.425:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:483] ConnectionHandler failed with net error: -2
+Feb 13, 2026 13:29:42.46 [15764:16956:0213/132942.467:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:434] Failed to connect to MCS endpoint with error -118
+Feb 13, 2026 13:39:42.49 [15764:16956:0213/133942.497:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:483] ConnectionHandler failed with net error: -2
+Feb 13, 2026 13:50:03.55 [15764:16956:0213/135003.552:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:434] Failed to connect to MCS endpoint with error -118
+Feb 13, 2026 14:00:03.58 [15764:16956:0213/140003.585:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:483] ConnectionHandler failed with net error: -2
+Feb 13, 2026 14:10:24.66 [15764:16956:0213/141024.668:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:434] Failed to connect to MCS endpoint with error -118
+Feb 13, 2026 14:20:24.75 [15764:16956:0213/142024.752:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:483] ConnectionHandler failed with net error: -2
+Feb 13, 2026 14:30:45.81 [15764:16956:0213/143045.813:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:434] Failed to connect to MCS endpoint with error -118
+Feb 13, 2026 14:40:45.85 [15764:16956:0213/144045.858:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:483] ConnectionHandler failed with net error: -2
+Feb 13, 2026 14:51:06.90 [15764:16956:0213/145106.904:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:434] Failed to connect to MCS endpoint with error -118
+Feb 13, 2026 15:01:06.93 [15764:16956:0213/150106.937:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:483] ConnectionHandler failed with net error: -2
+Feb 13, 2026 15:11:27.98 [15764:16956:0213/151127.984:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:434] Failed to connect to MCS endpoint with error -118

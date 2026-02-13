@@ -26,6 +26,7 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="app.management.book"/>
 			<item value="demo.spring_jdbc.SpringJDBCDemo"/>
 			<item value="demo.spring_core.SpringDemo"/>
 			<item value="com.hibernate.HibernateAssignment"/>
@@ -37,6 +38,7 @@
 			<item value="com.jstl.JSTlDemo"/>
 		</list>
 		<list key="groupId">
+			<item value="app.management.book"/>
 			<item value="demo.spring_jdbc"/>
 			<item value="demo.spring_core"/>
 			<item value="com.hibernate"/>
@@ -44,6 +46,7 @@
 			<item value="com.jstl"/>
 		</list>
 		<list key="artifactId">
+			<item value="BookManagementApp"/>
 			<item value="SpringJDBCDemo"/>
 			<item value="SpringDemo"/>
 			<item value="HibernateAssignment"/>
@@ -85,6 +88,14 @@
 		</list>
 	</section>
 	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
 	</section>
 	<section name="org.eclipse.m2e.core.pom.dependencies">
 	</section>
